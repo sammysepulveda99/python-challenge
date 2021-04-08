@@ -5,6 +5,8 @@ import csv
 csvpath = os.path.join('PyBank','Resources',"budget_data.csv")
 
 #Lists to store data
+
+#Month counter
 total_months = 0
 net_totalprofit_loss= 0
 value = 0
@@ -20,6 +22,7 @@ with open(csvpath) as csvfile:
 #Read the header row first
     csv_header= next(csvreader)
     firstrow= next(csvreader)
+#Add to months counter
     total_months +=1
     net_totalprofit_loss += int(firstrow[1])
     value = int(firstrow[1])
